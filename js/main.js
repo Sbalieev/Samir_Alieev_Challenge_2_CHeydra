@@ -1,8 +1,3 @@
-var moon = document.getElementById('moon');
-
-var moveMoon = new TimelineMax({repeat: -1});
-
-moveMoon.to(moon, 6.5, { ease: SlowMo.ease.config(0.7, 0.7, false), width:20,left: 2000});
 
 var groet = document.getElementById('groeting');
 var moveGroet = new TimelineMax();
