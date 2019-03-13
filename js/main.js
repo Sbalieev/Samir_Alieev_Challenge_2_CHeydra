@@ -34,15 +34,22 @@ function showTijd() {
   var m = date.getMinutes(); //Pakt de minuten
   var s = date.getSeconds(); //Pakt de secondes
 
+
+  var dagen = ["ZO","MA","DI","WO","DO","VR","ZA"];
+
+  var dagMaand = date.getDate();
+  var maand = date.getMonth() + 1;
+  var jaar = date.getFullYear();
+
+  var lDatum = dagMaand + " " + maand + " " + jaar;
+  document.getElementById("dag").innerHTML = dagen[date.getDay()] + " " + lDatum ;
+
   u = (u < 10) ? "0" + u : u;
   m = (m < 10) ? "0" + m : m;
   s = (s < 10) ? "0" + s : s;
 
-  var tijd = u + ":" + m + ":" + "<span id='sec'>" + s + "s</span>";
+  var tijd = u + ":" + m + ":" + s + "s";
   document.getElementById("tijd").innerHTML = tijd;
-
-  setInterval(showTijd, 1000);
-
 
   if(u >= 0 && u <= 4){
     document.getElementById("fases").innerHTML = "Nacht";
@@ -53,19 +60,8 @@ function showTijd() {
   } else if(u > 18 && u <= 23) {
     document.getElementById("fases").innerHTML = "Avond";
   }
+
+  setInterval(showTijd, 1000);
+
 }
-showTijd(); //Zorgt ervoor dat de klok meteen te zien nadat de pagina is geladen
-
-function showDatum() {
-  var datum = new Date();
-  var dagen = ["ZO","MA","DI","WO","DO","VR","ZA"];
-
-
-  var dagMaand = datum.getDate();
-  var maand = datum.getMonth() + 1;
-  var jaar = datum.getFullYear();
-
-  var lDatum = dagMaand + " " + maand + " " + jaar;
-  document.getElementById("dag").innerHTML = dagen[datum.getDay()] + " " + lDatum ;
-}
-showDatum(); //Laat de datum zien
+showTijd(); //Zorgt ervoor dat de klok meteen te zien nadat de pagina is geladen.
