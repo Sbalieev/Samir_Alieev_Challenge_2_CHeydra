@@ -12,7 +12,7 @@ html, body {
     width: 100%;
     flex: 1;
   }
-  
+    
   #faseFoto {
 	width: 100%;
     height: 68%;
@@ -25,6 +25,35 @@ html, body {
     position: absolute !important;
     top: 45% !important;
   }
+  
+  /* Veranderen van css door de dag heen */
+  
+.morning #groetTekst, 
+.morning #persoon,
+.morning #fases,
+.morning #tijd{
+	 color:#ec7a71;
+ }
+
+.morning #dag {
+	background: #ec7a71;
+}
+.morning #input {
+	border-bottom: 1px solid #ec7a71;
+	color: #ec7a71;
+}
+.morning button{
+	color: #ec7a71;
+	border-bottom: 1px solid #ec7a71;
+}
+.morning button:hover {
+	background: #ec7a71;
+	color: white;
+}
+.morning #tijd {
+	background: #ec7a71;
+}
+
 
 
 @media screen and (min-width: 1751px) {

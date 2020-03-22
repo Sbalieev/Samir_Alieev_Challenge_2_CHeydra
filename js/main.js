@@ -51,10 +51,13 @@ function showTijd() {
   var tijd = u + ":" + m + ":" + s + "s";
   document.getElementById("tijd").innerHTML = tijd;
 
+	let className = 'morning';
   if(u >= 0 && u <= 4){
+	  className = 'night';
     document.getElementById("fases").innerHTML = "Nacht";
 	document.getElementById('faseFoto').style.backgroundImage="url(img/nacht.png)";
   } else if(u >= 5 && u <= 12) {
+	  className = 'morning';
     document.getElementById("fases").innerHTML = "Ochtend";
 	document.getElementById('faseFoto').style.backgroundImage="url(img/ochtend.png)";
   } else if(u >= 12 && u <= 18) {
@@ -64,7 +67,7 @@ function showTijd() {
     document.getElementById("fases").innerHTML = "Avond";
 	document.getElementById('faseFoto').style.backgroundImage="url(img/avond.png)";
   }
-
+	document.body.classList.add(className);
   setInterval(showTijd, 1000);
 
 }
