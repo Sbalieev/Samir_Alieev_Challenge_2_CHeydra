@@ -29,20 +29,21 @@ function showTijd() {
 
 	var tijd = u + ":" + m + ":" + s + "s";
 	document.getElementById("tijd").innerHTML = tijd;
-
+	
+	//Het toevoegen van nieuwe CSS class
 	let className = 'morning';
 	
 	if(u >= 0 && u < 5){
-		className = 'nacht';
+		className = 'nacht'; //Toevoegen van nieuwe CSS class namelijk Nacht weergave
 		document.getElementById("fases").innerHTML = "Nacht";
 	} else if(u >= 5 && u < 12) {
-		className = 'ochtend';
+		className = 'ochtend'; //Toevoegen van nieuwe CSS class namelijk Ochtend weergave
 		document.getElementById("fases").innerHTML = "Ochtend";
 	} else if(u >= 12 && u < 18) {
-		className = 'middag';
+		className = 'middag'; //Toevoegen van nieuwe CSS class namelijk Middag weergave
 		document.getElementById("fases").innerHTML = "Middag";
 	} else if(u >= 18 && u <= 23) {
-		className = 'avond';
+		className = 'avond'; //Toevoegen van nieuwe CSS class namelijk Avond weergave
 		document.getElementById("fases").innerHTML = "Avond";
 	}
 document.body.classList.add(className);

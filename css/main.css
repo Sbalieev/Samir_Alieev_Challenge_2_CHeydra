@@ -603,7 +603,7 @@ header {
     }
 }
 
-@media screen and (min-width: 374px) and (max-width: 767px) {
+@media screen and (min-width: 376px) and (max-width: 767px) {
     #container {
         height: 100%;
         width: 100%;
@@ -852,7 +852,7 @@ header {
     }
 }
 
-@media screen and (max-width: 373px) {
+@media screen and (max-width: 375px) {
     #container {
         height: 100%;
         width: 100%;
